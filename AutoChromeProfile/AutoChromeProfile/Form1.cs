@@ -321,6 +321,11 @@ namespace AutoChromeProfile
                         CopyFilesRecursively(Path.Combine(text2, "Default"), Path.Combine(text, "Default"), all: false);
                     }
                     RunAuto(text, GetArgument(strProfile), index, profileLink, shortcutprofileName);
+                    if (Directory.Exists(text))
+                    {
+                        DeleteAll(text);
+                        Directory.Delete(text, recursive: true);
+                    }
                 }
                 catch
                 {
