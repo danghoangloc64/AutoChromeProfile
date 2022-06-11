@@ -203,10 +203,23 @@ namespace AutoChromeProfile
 
         private async void btnStart_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPostLink.Text))
+            if (radioButton1.Checked && string.IsNullOrWhiteSpace(txtPostLink.Text))
             {
                 MessageBox.Show("Please Input Post Link", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
+            }
+            if (radioButton2.Checked)
+            {
+                if (string.IsNullOrWhiteSpace(textBox1.Text))
+                {
+                    MessageBox.Show("Please Input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(textBox2.Text))
+                {
+                    MessageBox.Show("Please Input", "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    return;
+                }
             }
             if (string.IsNullOrWhiteSpace(txtNumberGroup.Text))
             {
@@ -838,6 +851,14 @@ namespace AutoChromeProfile
                         num++;
                     }
                 }
+
+                IJavaScriptExecutor javaScriptExecutor2 = chromeDriver;
+                if (radioButton2.Checked)
+                {
+                    IWebElement eleRandom = chromeDriver.FindElement(By.XPath("//input[@class='form-radio h-5 w-5 text-orange-600 killran']"));
+                    javaScriptExecutor2.ExecuteScript("arguments[0].click()", eleRandom);
+                }
+
                 chromeDriver.FindElement(By.XPath("//button[@class='px-4 py-2 rounded-md bg-red-100 text-red-500 clearpost']")).Click();
                 Thread.Sleep(500);
                 IAlert alert = chromeDriver.SwitchTo().Alert();
@@ -850,10 +871,25 @@ namespace AutoChromeProfile
                 Thread.Sleep(1000);
                 IWebElement webElement2 = chromeDriver.FindElement(By.XPath("//input[@class='appearance-none w-full outline-none focus:outline-none active:outline-none']"));
                 webElement2.Clear();
-                webElement2.SendKeys(txtPostLink.Text);
+
+                if (radioButton1.Checked)
+                {
+                    webElement2.SendKeys(txtPostLink.Text);
+                    Thread.Sleep(1000);
+                }
+                else
+                {
+                    webElement2.SendKeys(textBox1.Text);
+                    Thread.Sleep(1000);
+                    IWebElement webElement5 = chromeDriver.FindElement(By.XPath("//textarea[@class='p-4 text-gray-500 rounded-xl resize-none iskilled']"));
+                    webElement5.Clear();
+                    webElement5.SendKeys(textBox2.Text);
+                }
+
+
                 Thread.Sleep(int.Parse(txtTimeWaitPreview.Text) * 1000);
                 IWebElement webElement3 = chromeDriver.FindElement(By.XPath("//button[@class='py-3 my-8 text-lg bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl text-white kill-add']"));
-                IJavaScriptExecutor javaScriptExecutor2 = chromeDriver;
+           
                 javaScriptExecutor2.ExecuteScript("arguments[0].click()", webElement3);
                 Thread.Sleep(1000);
                 chromeDriver.FindElement(By.XPath("//button[@class='px-4 py-2 rounded-md bg-red-100 text-red-500 clear-list']")).Click();

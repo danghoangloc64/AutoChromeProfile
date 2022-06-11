@@ -49,6 +49,12 @@
             this.txtNumberGroup = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTimeWaitPreview = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,12 +71,12 @@
             this.txtProfilesFolder.Location = new System.Drawing.Point(117, 12);
             this.txtProfilesFolder.Name = "txtProfilesFolder";
             this.txtProfilesFolder.ReadOnly = true;
-            this.txtProfilesFolder.Size = new System.Drawing.Size(321, 20);
+            this.txtProfilesFolder.Size = new System.Drawing.Size(402, 20);
             this.txtProfilesFolder.TabIndex = 1;
             // 
             // btnSelectProfilesFolder
             // 
-            this.btnSelectProfilesFolder.Location = new System.Drawing.Point(444, 11);
+            this.btnSelectProfilesFolder.Location = new System.Drawing.Point(525, 11);
             this.btnSelectProfilesFolder.Name = "btnSelectProfilesFolder";
             this.btnSelectProfilesFolder.Size = new System.Drawing.Size(75, 23);
             this.btnSelectProfilesFolder.TabIndex = 2;
@@ -103,7 +109,7 @@
             this.listViewRun.HideSelection = false;
             this.listViewRun.Location = new System.Drawing.Point(210, 38);
             this.listViewRun.Name = "listViewRun";
-            this.listViewRun.Size = new System.Drawing.Size(228, 287);
+            this.listViewRun.Size = new System.Drawing.Size(309, 287);
             this.listViewRun.TabIndex = 3;
             this.listViewRun.UseCompatibleStateImageBehavior = false;
             this.listViewRun.View = System.Windows.Forms.View.Details;
@@ -140,9 +146,9 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(444, 40);
+            this.btnStart.Location = new System.Drawing.Point(554, 40);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 395);
+            this.btnStart.Size = new System.Drawing.Size(75, 392);
             this.btnStart.TabIndex = 2;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -171,7 +177,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 375);
+            this.label2.Location = new System.Drawing.Point(93, 364);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 0;
@@ -179,7 +185,7 @@
             // 
             // txtPostLink
             // 
-            this.txtPostLink.Location = new System.Drawing.Point(65, 371);
+            this.txtPostLink.Location = new System.Drawing.Point(149, 360);
             this.txtPostLink.Name = "txtPostLink";
             this.txtPostLink.Size = new System.Drawing.Size(188, 20);
             this.txtPostLink.TabIndex = 1;
@@ -187,7 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 375);
+            this.label3.Location = new System.Drawing.Point(405, 416);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 0;
@@ -195,9 +201,9 @@
             // 
             // txtNAT
             // 
-            this.txtNAT.Location = new System.Drawing.Point(346, 371);
+            this.txtNAT.Location = new System.Drawing.Point(492, 412);
             this.txtNAT.Name = "txtNAT";
-            this.txtNAT.Size = new System.Drawing.Size(92, 20);
+            this.txtNAT.Size = new System.Drawing.Size(56, 20);
             this.txtNAT.TabIndex = 1;
             this.txtNAT.Text = "5";
             this.txtNAT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimeWaitPreview_KeyPress);
@@ -205,7 +211,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(259, 418);
+            this.label4.Location = new System.Drawing.Point(220, 416);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 13);
             this.label4.TabIndex = 0;
@@ -213,7 +219,7 @@
             // 
             // txtNumberGroup
             // 
-            this.txtNumberGroup.Location = new System.Drawing.Point(382, 415);
+            this.txtNumberGroup.Location = new System.Drawing.Point(343, 412);
             this.txtNumberGroup.Name = "txtNumberGroup";
             this.txtNumberGroup.Size = new System.Drawing.Size(56, 20);
             this.txtNumberGroup.TabIndex = 1;
@@ -223,7 +229,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 419);
+            this.label5.Location = new System.Drawing.Point(12, 416);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 13);
             this.label5.TabIndex = 4;
@@ -231,19 +237,76 @@
             // 
             // txtTimeWaitPreview
             // 
-            this.txtTimeWaitPreview.Location = new System.Drawing.Point(157, 415);
+            this.txtTimeWaitPreview.Location = new System.Drawing.Point(157, 412);
             this.txtTimeWaitPreview.Name = "txtTimeWaitPreview";
-            this.txtTimeWaitPreview.Size = new System.Drawing.Size(96, 20);
+            this.txtTimeWaitPreview.Size = new System.Drawing.Size(56, 20);
             this.txtTimeWaitPreview.TabIndex = 5;
             this.txtTimeWaitPreview.Text = "30";
             this.txtTimeWaitPreview.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtTimeWaitPreview.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTimeWaitPreview_KeyPress);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(93, 390);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Post link:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(149, 386);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(10, 362);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(65, 17);
+            this.radioButton1.TabIndex = 6;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Option 1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(10, 388);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(65, 17);
+            this.radioButton2.TabIndex = 6;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Option 2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(343, 390);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Title (Caption):";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(424, 386);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(124, 20);
+            this.textBox2.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 450);
+            this.ClientSize = new System.Drawing.Size(639, 451);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.txtTimeWaitPreview);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.listViewRun);
@@ -258,6 +321,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNAT);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPostLink);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtProfilesFolder);
@@ -296,6 +363,12 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTimeWaitPreview;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
