@@ -610,6 +610,58 @@ namespace AutoChromeProfile
                 }
                 try
                 {
+                    if (chromeDriver.PageSource.Contains("Disagree with decision"))
+                    {
+                        System.IO.File.Copy(Path.Combine(profileLink, shortcutprofileName + ".lnk"), Path.Combine("profiles_died", shortcutprofileName + ".lnk"));
+                        System.IO.File.Delete(Path.Combine(profileLink, shortcutprofileName + ".lnk"));
+                        listViewRun.Invoke((Action)delegate
+                        {
+                            listViewRun.Items[index].SubItems[1].Text = "Died";
+                        });
+                        try
+                        {
+                            chromeDriver.Close();
+                            chromeDriver.Quit();
+                        }
+                        catch
+                        {
+                        }
+                        m_nRunningCount--;
+                        bWaiting = false;
+                        return;
+                    }
+                }
+                catch
+                {
+                }
+                try
+                {
+                    if (chromeDriver.PageSource.Contains("Your account is not visible to people on Facebook, and you can't use it."))
+                    {
+                        System.IO.File.Copy(Path.Combine(profileLink, shortcutprofileName + ".lnk"), Path.Combine("profiles_died", shortcutprofileName + ".lnk"));
+                        System.IO.File.Delete(Path.Combine(profileLink, shortcutprofileName + ".lnk"));
+                        listViewRun.Invoke((Action)delegate
+                        {
+                            listViewRun.Items[index].SubItems[1].Text = "Died";
+                        });
+                        try
+                        {
+                            chromeDriver.Close();
+                            chromeDriver.Quit();
+                        }
+                        catch
+                        {
+                        }
+                        m_nRunningCount--;
+                        bWaiting = false;
+                        return;
+                    }
+                }
+                catch
+                {
+                }
+                try
+                {
                     if (chromeDriver.Url.Contains("free"))
                     {
                         IJavaScriptExecutor javaScriptExecutor = chromeDriver;
