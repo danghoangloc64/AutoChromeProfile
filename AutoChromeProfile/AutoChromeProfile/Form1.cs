@@ -1006,6 +1006,7 @@ namespace AutoChromeProfile
                     listAllFolderProfile.Add(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Google", "Chrome", "User Data", GetArgument(text)));
                 }
             }
+
         }
 
         private void txtTimeWaitPreview_KeyPress(object sender, KeyPressEventArgs e)
